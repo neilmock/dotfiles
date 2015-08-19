@@ -1,0 +1,15 @@
+[alias]
+  cleanup = !git branch --merged | grep -v '*' | xargs git branch -d
+
+[github]
+  user = neilmock
+
+[hub]
+  protocol = https
+
+[push]
+  default = simple
+
+[user]
+  name = Neil Mock
+  email = neilmock@gmail.com
