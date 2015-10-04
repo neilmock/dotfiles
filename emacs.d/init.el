@@ -9,7 +9,7 @@
 
 (add-to-list 'el-get-recipe-path "~/.emacs.d/el-get-user/recipes")
 
-(el-get 'sync '(cider clojure-mode ido-hacks
+(el-get 'sync '(cider clojure-mode dockerfile-mode ido-hacks
                       magit markdown-mode paredit yaml-mode
                       find-file-in-project))
 
@@ -196,16 +196,6 @@
 (add-to-list 'auto-mode-alist '("Capfile$" . ruby-mode))
 (add-to-list 'auto-mode-alist '("Gemfile$" . ruby-mode))
 
-;; (defun copy-from-osx ()
-;;   (shell-command-to-string "pbpaste"))
-
-;; (defun paste-to-osx (text &optional push)
-;;   (let ((process-connection-type nil))
-;;     (let ((proc (start-process "pbcopy" "*Messages*" "pbcopy")))
-;;       (process-send-string proc text)
-;;       (process-send-eof proc))))
-
-;; (setq interprogram-cut-function 'paste-to-osx)
-;; (setq interprogram-paste-function 'copy-from-osx)
-
 (setq magit-push-always-verify nil)
+
+(setq js-indent-level 2)
