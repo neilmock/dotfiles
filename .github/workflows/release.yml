@@ -9,5 +9,13 @@ jobs:
       - uses: actions/setup-node@v3
         with:
           node-version: 20
+
       - run: npm install -g @devcontainers/cli
-      - run: devcontainer build --workspace-folder .
+      - run: devcontainer build --workspace-folder . --image-name registry.try.codes/j2hsnlgeqim23ega4930/ntm-1
+
+      - name: login to try registry
+        uses: docker/login-action@v3
+        with:
+          registry: registry.try.codes
+          username: neilmock
+          password: ${{ secrets.TRY_REGISTRY_PASSWORD }}
