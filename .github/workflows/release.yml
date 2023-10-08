@@ -19,3 +19,6 @@ jobs:
           registry: registry.try.codes
           username: neilmock
           password: ${{ secrets.TRY_REGISTRY_PASSWORD }}
+
+      - name: push to try registry
+        run: docker push registry.try.codes/j2hsnlgeqim23ega4930/ntm-1
