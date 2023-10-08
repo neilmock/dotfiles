@@ -1,4 +1,4 @@
-name: publish to try.codes
+name: publish
 on: workflow_dispatch
 
 jobs:
@@ -10,3 +10,4 @@ jobs:
         with:
           node-version: 20
       - run: npm install -g @devcontainers/cli
+      - run: devcontainer build --workspace-folder .
